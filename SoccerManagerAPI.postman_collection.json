@@ -1,0 +1,3015 @@
+{
+	"info": {
+		"_postman_id": "74aaa0fd-3e1c-4c90-8516-a05916fee441",
+		"name": "Soccer Online Managament Service",
+		"description": "Soccer Online Management API\n\nContact Support:\n Name: Enes BOYACI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "player",
+			"item": [
+				{
+					"name": "Get player list.",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBtYWlsLmNvbSIsImlzQWRtaW4iOnRydWUsImV4cCI6MTY0ODM5OTcxOCwiaWF0IjoxNjQ4MzgxNzE4fQ.HgZuJv74UpHHw-lyKSo6HXNH4NpkZqOMnyqYD9hoZbvcx5dqBnq7Rwj7J4M7Sk3SBhZvMxjMXHXzL6lExyWpVA",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/player",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"player"
+							]
+						},
+						"description": "Get player list."
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/player",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"player"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/player",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"player"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/player",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"player"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/player",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"player"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Create player",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBtYWlsLmNvbSIsImlzQWRtaW4iOnRydWUsImV4cCI6MTY0ODM5OTcxOCwiaWF0IjoxNjQ4MzgxNzE4fQ.HgZuJv74UpHHw-lyKSo6HXNH4NpkZqOMnyqYD9hoZbvcx5dqBnq7Rwj7J4M7Sk3SBhZvMxjMXHXzL6lExyWpVA",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"age\": 29,\n  \"country\": \"Turkey\",\n  \"firstName\": \"Enes \",\n  \"lastName\": \"Player1\",\n  \"marketValue\": 150000,\n  \"type\": 1,\n  \"teamId\":57\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/player",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"player"
+							]
+						},
+						"description": "Create player with given information."
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/player",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"player"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/player",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"player"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/player",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"player"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/player",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"player"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/player",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"player"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Update player",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBtYWlsLmNvbSIsImlzQWRtaW4iOnRydWUsImV4cCI6MTY0ODM5OTcxOCwiaWF0IjoxNjQ4MzgxNzE4fQ.HgZuJv74UpHHw-lyKSo6HXNH4NpkZqOMnyqYD9hoZbvcx5dqBnq7Rwj7J4M7Sk3SBhZvMxjMXHXzL6lExyWpVA",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 829,\n    \"firstName\": \"Enes \",\n    \"lastName\": \"Player1\",\n    \"country\": \"Turkey\",\n    \"age\": 29,\n    \"type\": 1,\n    \"marketValue\": 150000.0,\n    \"teamId\": 48\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/player",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"player"
+							]
+						},
+						"description": "Update player with given information."
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/player",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"player"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "No Content",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/player",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"player"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/player",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"player"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/player",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"player"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Delete player",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBtYWlsLmNvbSIsImlzQWRtaW4iOnRydWUsImV4cCI6MTY0ODM5OTcxOCwiaWF0IjoxNjQ4MzgxNzE4fQ.HgZuJv74UpHHw-lyKSo6HXNH4NpkZqOMnyqYD9hoZbvcx5dqBnq7Rwj7J4M7Sk3SBhZvMxjMXHXzL6lExyWpVA",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/player/829",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"player",
+								"829"
+							]
+						},
+						"description": "Delete player with given player id."
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/player/:playerId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"player",
+										":playerId"
+									],
+									"variable": [
+										{
+											"key": "playerId",
+											"value": "-76180913",
+											"description": "(Required) playerId"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "No Content",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/player/:playerId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"player",
+										":playerId"
+									],
+									"variable": [
+										{
+											"key": "playerId",
+											"value": "-76180913",
+											"description": "(Required) playerId"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/player/:playerId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"player",
+										":playerId"
+									],
+									"variable": [
+										{
+											"key": "playerId",
+											"value": "-76180913",
+											"description": "(Required) playerId"
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/player/:playerId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"player",
+										":playerId"
+									],
+									"variable": [
+										{
+											"key": "playerId",
+											"value": "-76180913",
+											"description": "(Required) playerId"
+										}
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "team",
+			"item": [
+				{
+					"name": "Get team.",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMUBtYWlsLmNvbSIsImlzVXNlciI6dHJ1ZSwiZXhwIjoxNjQ4NDE0MDExLCJpYXQiOjE2NDgzOTYwMTF9.Yvmko4EB2dPJ9YSQols_eoUQ6Qm709wJqrMWV6XFufe54dBZhyhYVBNB6Qqj2R8J_aCQYm-sKQugInMZQnbb5g",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/team",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"team"
+							]
+						},
+						"description": "Get team list."
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/team",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"team"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/team",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"team"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/team",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"team"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/team",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"team"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Create team",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBtYWlsLmNvbSIsImlzQWRtaW4iOnRydWUsImV4cCI6MTY0ODM5OTcxOCwiaWF0IjoxNjQ4MzgxNzE4fQ.HgZuJv74UpHHw-lyKSo6HXNH4NpkZqOMnyqYD9hoZbvcx5dqBnq7Rwj7J4M7Sk3SBhZvMxjMXHXzL6lExyWpVA",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"country\": \"culpa amet in\",\n  \"name\": \"fugiat eu\",\n  \"balance\": 15000000,\n  \"playerValue\": 12577,\n  \"userId\": 84\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/team",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"team"
+							]
+						},
+						"description": "Creates team with given information."
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/team",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"team"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/team",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"team"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/team",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"team"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/team",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"team"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/team",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"team"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Update team",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBtYWlsLmNvbSIsImlzQWRtaW4iOnRydWUsImV4cCI6MTY0ODM5OTcxOCwiaWF0IjoxNjQ4MzgxNzE4fQ.HgZuJv74UpHHw-lyKSo6HXNH4NpkZqOMnyqYD9hoZbvcx5dqBnq7Rwj7J4M7Sk3SBhZvMxjMXHXzL6lExyWpVA",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "   {\n        \"id\": 57,\n        \"name\": \"Team22\",\n        \"country\": \"Turkey22\",\n        \"userId\": 84\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/team",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"team"
+							]
+						},
+						"description": "Update team with given information."
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/team",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"team"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "No Content",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/team",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"team"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/team",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"team"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/team",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"team"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Delete team",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBtYWlsLmNvbSIsImlzQWRtaW4iOnRydWUsImV4cCI6MTY0ODM5OTcxOCwiaWF0IjoxNjQ4MzgxNzE4fQ.HgZuJv74UpHHw-lyKSo6HXNH4NpkZqOMnyqYD9hoZbvcx5dqBnq7Rwj7J4M7Sk3SBhZvMxjMXHXzL6lExyWpVA",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/team/54",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"team",
+								"54"
+							]
+						},
+						"description": "Delete team with given team id."
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/team/:teamId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"team",
+										":teamId"
+									],
+									"variable": [
+										{
+											"key": "teamId",
+											"value": "-76180913",
+											"description": "(Required) teamId"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "No Content",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/team/:teamId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"team",
+										":teamId"
+									],
+									"variable": [
+										{
+											"key": "teamId",
+											"value": "-76180913",
+											"description": "(Required) teamId"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/team/:teamId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"team",
+										":teamId"
+									],
+									"variable": [
+										{
+											"key": "teamId",
+											"value": "-76180913",
+											"description": "(Required) teamId"
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/team/:teamId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"team",
+										":teamId"
+									],
+									"variable": [
+										{
+											"key": "teamId",
+											"value": "-76180913",
+											"description": "(Required) teamId"
+										}
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "transfer",
+			"item": [
+				{
+					"name": "Get player list on transfer.",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMUBtYWlsLmNvbSIsImlzVXNlciI6dHJ1ZSwiZXhwIjoxNjQ4NDE0MDExLCJpYXQiOjE2NDgzOTYwMTF9.Yvmko4EB2dPJ9YSQols_eoUQ6Qm709wJqrMWV6XFufe54dBZhyhYVBNB6Qqj2R8J_aCQYm-sKQugInMZQnbb5g",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/transfer?country=consequat&playerName=consequat&playerValue=1000000&teamName=consequat",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"transfer"
+							],
+							"query": [
+								{
+									"key": "country",
+									"value": "consequat"
+								},
+								{
+									"key": "playerName",
+									"value": "consequat"
+								},
+								{
+									"key": "playerValue",
+									"value": "1000000"
+								},
+								{
+									"key": "teamName",
+									"value": "consequat"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/transfer?country=consequat&playerName=consequat&playerValue=consequat&teamName=consequat",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"transfer"
+									],
+									"query": [
+										{
+											"key": "country",
+											"value": "consequat"
+										},
+										{
+											"key": "playerName",
+											"value": "consequat"
+										},
+										{
+											"key": "playerValue",
+											"value": "consequat"
+										},
+										{
+											"key": "teamName",
+											"value": "consequat"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/transfer?country=consequat&playerName=consequat&playerValue=consequat&teamName=consequat",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"transfer"
+									],
+									"query": [
+										{
+											"key": "country",
+											"value": "consequat"
+										},
+										{
+											"key": "playerName",
+											"value": "consequat"
+										},
+										{
+											"key": "playerValue",
+											"value": "consequat"
+										},
+										{
+											"key": "teamName",
+											"value": "consequat"
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/transfer?country=consequat&playerName=consequat&playerValue=consequat&teamName=consequat",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"transfer"
+									],
+									"query": [
+										{
+											"key": "country",
+											"value": "consequat"
+										},
+										{
+											"key": "playerName",
+											"value": "consequat"
+										},
+										{
+											"key": "playerValue",
+											"value": "consequat"
+										},
+										{
+											"key": "teamName",
+											"value": "consequat"
+										}
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/transfer?country=consequat&playerName=consequat&playerValue=consequat&teamName=consequat",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"transfer"
+									],
+									"query": [
+										{
+											"key": "country",
+											"value": "consequat"
+										},
+										{
+											"key": "playerName",
+											"value": "consequat"
+										},
+										{
+											"key": "playerValue",
+											"value": "consequat"
+										},
+										{
+											"key": "teamName",
+											"value": "consequat"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Transfer player",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMUBtYWlsLmNvbSIsImlzVXNlciI6dHJ1ZSwiZXhwIjoxNjQ4NDE0MDExLCJpYXQiOjE2NDgzOTYwMTF9.Yvmko4EB2dPJ9YSQols_eoUQ6Qm709wJqrMWV6XFufe54dBZhyhYVBNB6Qqj2R8J_aCQYm-sKQugInMZQnbb5g",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"playerId\": 398,\n  \"transferAmount\": 100000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/transfer",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"transfer"
+							]
+						},
+						"description": "Initiates the player's transfer process. When the transfer process starts, the player will be shown in the transfer list."
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"playerId\": -54873566,\n  \"transferAmount\": 14981655.684929058,\n  \"player\": {\n    \"age\": 50,\n    \"country\": \"reprehenderit nisi non Lorem\",\n    \"firstName\": \"ir\",\n    \"lastName\": \"laborum aliquip eiusmod consectetur\",\n    \"marketValue\": 47497270.734170504,\n    \"type\": 1,\n    \"id\": 32169960,\n    \"teamId\": -33078316\n  },\n  \"team\": {\n    \"country\": \"quis cupidatat\",\n    \"name\": \"in ea cillum dolor\",\n    \"balance\": -27035620.482163385,\n    \"id\": -77435009,\n    \"playerValue\": -28132061.617285147,\n    \"userId\": 78327787\n  },\n  \"transferStartDate\": \"1973-12-21T22:53:42.499Z\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/transfer",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"transfer"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"playerId\": -54873566,\n  \"transferAmount\": 14981655.684929058,\n  \"player\": {\n    \"age\": 50,\n    \"country\": \"reprehenderit nisi non Lorem\",\n    \"firstName\": \"ir\",\n    \"lastName\": \"laborum aliquip eiusmod consectetur\",\n    \"marketValue\": 47497270.734170504,\n    \"type\": 1,\n    \"id\": 32169960,\n    \"teamId\": -33078316\n  },\n  \"team\": {\n    \"country\": \"quis cupidatat\",\n    \"name\": \"in ea cillum dolor\",\n    \"balance\": -27035620.482163385,\n    \"id\": -77435009,\n    \"playerValue\": -28132061.617285147,\n    \"userId\": 78327787\n  },\n  \"transferStartDate\": \"1973-12-21T22:53:42.499Z\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/transfer",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"transfer"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"playerId\": -54873566,\n  \"transferAmount\": 14981655.684929058,\n  \"player\": {\n    \"age\": 50,\n    \"country\": \"reprehenderit nisi non Lorem\",\n    \"firstName\": \"ir\",\n    \"lastName\": \"laborum aliquip eiusmod consectetur\",\n    \"marketValue\": 47497270.734170504,\n    \"type\": 1,\n    \"id\": 32169960,\n    \"teamId\": -33078316\n  },\n  \"team\": {\n    \"country\": \"quis cupidatat\",\n    \"name\": \"in ea cillum dolor\",\n    \"balance\": -27035620.482163385,\n    \"id\": -77435009,\n    \"playerValue\": -28132061.617285147,\n    \"userId\": 78327787\n  },\n  \"transferStartDate\": \"1973-12-21T22:53:42.499Z\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/transfer",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"transfer"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"playerId\": -54873566,\n  \"transferAmount\": 14981655.684929058,\n  \"player\": {\n    \"age\": 50,\n    \"country\": \"reprehenderit nisi non Lorem\",\n    \"firstName\": \"ir\",\n    \"lastName\": \"laborum aliquip eiusmod consectetur\",\n    \"marketValue\": 47497270.734170504,\n    \"type\": 1,\n    \"id\": 32169960,\n    \"teamId\": -33078316\n  },\n  \"team\": {\n    \"country\": \"quis cupidatat\",\n    \"name\": \"in ea cillum dolor\",\n    \"balance\": -27035620.482163385,\n    \"id\": -77435009,\n    \"playerValue\": -28132061.617285147,\n    \"userId\": 78327787\n  },\n  \"transferStartDate\": \"1973-12-21T22:53:42.499Z\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/transfer",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"transfer"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"playerId\": -54873566,\n  \"transferAmount\": 14981655.684929058,\n  \"player\": {\n    \"age\": 50,\n    \"country\": \"reprehenderit nisi non Lorem\",\n    \"firstName\": \"ir\",\n    \"lastName\": \"laborum aliquip eiusmod consectetur\",\n    \"marketValue\": 47497270.734170504,\n    \"type\": 1,\n    \"id\": 32169960,\n    \"teamId\": -33078316\n  },\n  \"team\": {\n    \"country\": \"quis cupidatat\",\n    \"name\": \"in ea cillum dolor\",\n    \"balance\": -27035620.482163385,\n    \"id\": -77435009,\n    \"playerValue\": -28132061.617285147,\n    \"userId\": 78327787\n  },\n  \"transferStartDate\": \"1973-12-21T22:53:42.499Z\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/transfer",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"transfer"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Buy player",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBtYWlsLmNvbSIsImlzQWRtaW4iOnRydWUsImV4cCI6MTY0ODM5OTcxOCwiaWF0IjoxNjQ4MzgxNzE4fQ.HgZuJv74UpHHw-lyKSo6HXNH4NpkZqOMnyqYD9hoZbvcx5dqBnq7Rwj7J4M7Sk3SBhZvMxjMXHXzL6lExyWpVA",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/transfer/buy/162",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"transfer",
+								"buy",
+								"162"
+							]
+						},
+						"description": "Buy player and add to own team."
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/transfer/buy/:playerId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"transfer",
+										"buy",
+										":playerId"
+									],
+									"variable": [
+										{
+											"key": "playerId",
+											"value": "-76180913",
+											"description": "(Required) playerId"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/transfer/buy/:playerId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"transfer",
+										"buy",
+										":playerId"
+									],
+									"variable": [
+										{
+											"key": "playerId",
+											"value": "-76180913",
+											"description": "(Required) playerId"
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/transfer/buy/:playerId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"transfer",
+										"buy",
+										":playerId"
+									],
+									"variable": [
+										{
+											"key": "playerId",
+											"value": "-76180913",
+											"description": "(Required) playerId"
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/transfer/buy/:playerId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"transfer",
+										"buy",
+										":playerId"
+									],
+									"variable": [
+										{
+											"key": "playerId",
+											"value": "-76180913",
+											"description": "(Required) playerId"
+										}
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/transfer/buy/:playerId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"transfer",
+										"buy",
+										":playerId"
+									],
+									"variable": [
+										{
+											"key": "playerId",
+											"value": "-76180913",
+											"description": "(Required) playerId"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Delete transfer",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMUBtYWlsLmNvbSIsImlzVXNlciI6dHJ1ZSwiZXhwIjoxNjQ4MjM2NjkzLCJpYXQiOjE2NDgyMTg2OTN9.gip8r2LoAYJBPeRCMeM_Qi0v7a4aoBRo05aVUgoAaYfo75X_AZaHqXhgpQdI9wjIDE8fAFoPRE_x1Rkf3_weiw",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/transfer/5",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"transfer",
+								"5"
+							]
+						},
+						"description": "Delete player on transfer list."
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/transfer/:playerId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"transfer",
+										":playerId"
+									],
+									"variable": [
+										{
+											"key": "playerId",
+											"value": "-76180913",
+											"description": "(Required) playerId"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "No Content",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/transfer/:playerId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"transfer",
+										":playerId"
+									],
+									"variable": [
+										{
+											"key": "playerId",
+											"value": "-76180913",
+											"description": "(Required) playerId"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/transfer/:playerId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"transfer",
+										":playerId"
+									],
+									"variable": [
+										{
+											"key": "playerId",
+											"value": "-76180913",
+											"description": "(Required) playerId"
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/transfer/:playerId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"transfer",
+										":playerId"
+									],
+									"variable": [
+										{
+											"key": "playerId",
+											"value": "-76180913",
+											"description": "(Required) playerId"
+										}
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Authenticate user",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"user1@mail.com\",\n  \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/authenticate",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"authenticate"
+					]
+				},
+				"description": "Authenticate user with given email and password credentials. If user successfull authenticated, JWT token will generated."
+			},
+			"response": [
+				{
+					"name": "OK",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "Added as a part of security scheme: apikey",
+								"key": "Authorization",
+								"value": "<API Key>"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"id et sit\",\n  \"password\": \"consectetur e\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/authenticate",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"authenticate"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "*/*"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "Created",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "Added as a part of security scheme: apikey",
+								"key": "Authorization",
+								"value": "<API Key>"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"id et sit\",\n  \"password\": \"consectetur e\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/authenticate",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"authenticate"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "Unauthorized",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "Added as a part of security scheme: apikey",
+								"key": "Authorization",
+								"value": "<API Key>"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"id et sit\",\n  \"password\": \"consectetur e\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/authenticate",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"authenticate"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "Forbidden",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "Added as a part of security scheme: apikey",
+								"key": "Authorization",
+								"value": "<API Key>"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"id et sit\",\n  \"password\": \"consectetur e\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/authenticate",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"authenticate"
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "Not Found",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "Added as a part of security scheme: apikey",
+								"key": "Authorization",
+								"value": "<API Key>"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"id et sit\",\n  \"password\": \"consectetur e\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/authenticate",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"authenticate"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "Authenticate user",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"id et sit\",\n  \"password\": \"consectetur e\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/authenticate",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"authenticate"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Register user",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"user1@mail.com\",\n  \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/register",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"register"
+					]
+				},
+				"description": "Register user with given email and password credentials. After registration success, creates team and add 20 player to team for this user."
+			},
+			"response": [
+				{
+					"name": "OK",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "Added as a part of security scheme: apikey",
+								"key": "Authorization",
+								"value": "<API Key>"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"laborum consequat cillum anim\",\n  \"password\": \"consectetur \"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/register",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "*/*"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "Created",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "Added as a part of security scheme: apikey",
+								"key": "Authorization",
+								"value": "<API Key>"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"laborum consequat cillum anim\",\n  \"password\": \"consectetur \"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/register",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "Unauthorized",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "Added as a part of security scheme: apikey",
+								"key": "Authorization",
+								"value": "<API Key>"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"laborum consequat cillum anim\",\n  \"password\": \"consectetur \"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/register",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "Forbidden",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "Added as a part of security scheme: apikey",
+								"key": "Authorization",
+								"value": "<API Key>"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"laborum consequat cillum anim\",\n  \"password\": \"consectetur \"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/register",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "Not Found",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "Added as a part of security scheme: apikey",
+								"key": "Authorization",
+								"value": "<API Key>"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"laborum consequat cillum anim\",\n  \"password\": \"consectetur \"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/register",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "//localhost:8080",
+			"type": "string"
+		}
+	]
+}

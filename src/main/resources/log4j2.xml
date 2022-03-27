@@ -1,0 +1,57 @@
+<Configuration status="info">
+	<Properties>
+	    <Property name="log-path">logs</Property>
+	</Properties>
+	<Appenders>
+		<Console name="Console" target="SYSTEM_OUT" >
+			<PatternLayout pattern="%d{dd MM yyyy HH:mm:ss.SSS} [%t] [%-5p] %C{1}.%M(%F:%L) - %msg%n" />
+		</Console>
+		
+		<RollingFile name="GeneralAppender"  target="SYSTEM_OUT" fileName="${log-path}/general.log" filePattern="${log-path}/general-%d{yyyy-MM-dd}.gz">
+			<PatternLayout pattern="%d{dd MM yyyy HH:mm:ss.SSS} - %msg%n" />
+			
+			<Policies>
+	            <TimeBasedTriggeringPolicy />
+	            <SizeBasedTriggeringPolicy size="50 MB" />
+	        </Policies>
+		</RollingFile>
+		<Routing name="RoutingAppender">
+			<Routes pattern="$${ctx:ROUTINGKEY}">
+			    <Route key="$${ctx:ROUTINGKEY}">
+					<RollingFile name="Rolling-default" fileName="${log-path}/default.log"
+						filePattern="${log-path}/${date:yyyy-MM}/default-%d{yyyy-MM-dd}-%i.log.gz">
+						<PatternLayout>
+							<pattern>%d{dd MM yyyy HH:mm:ss.SSS} [%t] [%-5p] %C{1}.%M(%F:%L) - %msg%n</pattern>
+						</PatternLayout>
+						<Policies>
+							<TimeBasedTriggeringPolicy interval="6" modulate="true" />
+							<SizeBasedTriggeringPolicy size="50 MB" />
+						</Policies>
+					</RollingFile>
+				</Route>
+    
+				<!-- This route is chosen if the name of the log file is required to be dynamically determined. -->
+				<Route>
+					<RollingFile name="Rolling-${ctx:ROUTINGKEY}" fileName="${log-path}/${ctx:ROUTINGKEY}.log"
+						filePattern="${log-path}/${date:yyyy-MM}/${ctx:ROUTINGKEY}-%d{yyyy-MM-dd}-%i.log.gz">
+						<PatternLayout>
+							<pattern>%d{dd MM yyyy HH:mm:ss.SSS} [%t] [%-5p] %C{1}.%M(%F:%L) - %msg%n</pattern>
+						</PatternLayout>
+						<Policies>
+							<TimeBasedTriggeringPolicy interval="6" modulate="true" />
+							<SizeBasedTriggeringPolicy size="50 MB" />
+						</Policies>
+					</RollingFile>
+				</Route>
+			</Routes>
+		</Routing>
+	</Appenders>
+	<Loggers>
+		<Logger name="general" level="info" additivity="false">
+			<AppenderRef ref="GeneralAppender" />
+		</Logger>
+		<Root level="info">
+			<AppenderRef ref="GeneralAppender" />
+		</Root>
+	</Loggers>
+</Configuration>
